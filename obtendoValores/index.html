@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="sript.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Obtendo Valores</title>
+</head>
+<body>
+    <h1 class="title">Inscreva-se</h1>
+    <section>
+        <form class="container" action="cad.php" method="post">
+
+            <div class="box-input">
+                <div class="box">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="idnome" required>
+                </div>
+
+                <div class="box">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="idemail" required>
+                </div>
+
+                <div class="box">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="idsenha" required>
+                </div>
+                
+                <div class="box">
+                    <label for="repsenha">Repetir Senha</label>
+                    <input type="password" name="repsenha" id="idrepsenha" required>
+                </div>
+            </div>
+
+            <input class="button-form" type="submit" value="Enviar Cadastro">
+
+        </form>
+    </section>
+</body>
+</html>
