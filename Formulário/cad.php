@@ -18,11 +18,12 @@
     <h1 class="title">Seus Dados</h1>
     <section class="container">
         <div class="box">
+            <img src="user.jpg" alt="">
             <p>Nome: <?php echo $nome;?></p><br>
             <p>E-mail: <?php echo $email;?></p>
         </div>
         
-        <a href="index.html"><button class="bnt-form">Voltar</button></a>
+        <a href="index.html"><button class="button-form">Voltar</button></a>
     </section>
 
 </body>
