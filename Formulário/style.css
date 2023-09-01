@@ -10,6 +10,7 @@ body {
 .title{
     margin-top: 30px;
     text-align: center;
+    color: #30305e;
 }
 
 section {
@@ -18,7 +19,7 @@ section {
     align-items: space-around;
     margin: auto;
     margin-top: 40px;
-    width: 370px;
+    width: 350px;
     height: 480px;
     background-color: #6666c4;
     border-radius: 8px;
@@ -30,6 +31,10 @@ section {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+label {
+    font-size: 14px;
     color: white;
 }
 
@@ -37,7 +42,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 60%;
+    height: 56%;
 }
 
 .box-input input{
@@ -72,5 +77,28 @@ section {
 
 img {
     object-fit: cover;
-    width: 30px;
+    width: 80px;
 }   
+
+.box-date {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.box-date {
+    color: white;
+    font-size: 15px;
+}
+
+.box-date p {
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.box-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
