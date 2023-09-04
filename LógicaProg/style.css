@@ -4,12 +4,14 @@
     margin: 0;
 }
 
+/*Index*/
+
 a {
     text-decoration: none;
 }
 
 body {
-    background: rgb(141, 138, 138);
+    background: black;
 }
 
 .title {

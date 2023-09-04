@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+
+<?php 
+        $fahren = 20;
+        $cel = number_format((5*($fahren-32)/9), 2);
+
+        echo "$fahren °F é igual a $cel °"
+
+    ?>
 <a href="index.php"><button>Index</button></a>
 
 </body>

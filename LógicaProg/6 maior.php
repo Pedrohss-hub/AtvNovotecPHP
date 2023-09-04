@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
+<?php 
+        $num1 = 10;
+        $num2 = 0;
+
+        if ($num1 < $num2) {
+            echo "$num1 é menor que $num2";
+
+        } else if ($num1 > $num2){
+            echo "$num1 é maior que $num2";
+
+        } else {
+            echo "$num1 é igual a $num2";
+
+        }
+    
+    ?>
+
 <a href="index.php"><button>Index</button></a>
 
 </body>

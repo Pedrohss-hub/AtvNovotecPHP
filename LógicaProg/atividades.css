@@ -1,0 +1,118 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+}
+
+/*Atividades*/
+
+.title {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.input-number {
+    display: flex;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    width: 100px;
+    height: 100px;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: none;
+    width: 80px;
+    height: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.button-index {
+    margin-left: 40px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 10px  1px white;
+    animation: textColor 1s linear infinite;
+}
+
+.resp {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+
+.tabuada {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.itens-tabuada {
+    margin: 8px;
+    text-align: center;
+}
+
+@keyframes textColor {
+    0%{
+        color: red;
+    }
+    50%{
+        color: blue;
+    }
+    75%{
+        color: yellow;
+    }
+    100%{
+        color: rgb(1, 184, 1);
+    }
+}

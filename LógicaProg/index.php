@@ -12,7 +12,7 @@
     <div class="container">
         <a href="1 positivo.php" onmouseout="">Positivo ou Negativo</a>
         <a href="2 tabuada.php">Tabuada</a>
-        <a href="3 fatora.php">Fataroção</a>
+        <a href="3 fatorar.php">Fatoração</a>
         <a href="4 par.php">Par ou Ímpar</a>
         <a href="5 crescente.php">Crescente</a>
         <a href="6 maior.php">Maior ou menor</a>

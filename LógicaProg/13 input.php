@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+
+<?php 
+        $num = 10;
+
+        echo $num;
+    ?>
 <a href="index.php"><button>Index</button></a>
 
 </body>
