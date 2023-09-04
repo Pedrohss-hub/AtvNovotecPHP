@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="atividades.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FatoraçãoR</title>
+    <title>Fatoração</title>
 </head>
 <body>
 
@@ -12,7 +12,7 @@
     <form class="container" action="3 fatorar.php">
         <label for="num">Insira um Número</label>
         <input type="number" name="num" value="<?= $_REQUEST['num'] ?? '0'?>">
-        <input type="submit" value="Enivar">
+        <input type="submit" value="Clique Aqui">
     </form>
 
     <?php 

@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="atividades.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tabuada</title>
+    <title>Tabuada</title>
 </head>
 <body>
     <h1 class="title">Tabuada</h1>
@@ -19,7 +19,7 @@
                 <input type="number" name="num2" value="<?= $_REQUEST['num2'] ?? ''?>">
             </div>
         </div>
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Clique Aqui">
     </form>
 
     <div class="tabuada">

@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="atividades.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mês</title>
 </head>
 <body>
     <h1 class="title">Mês</h1>

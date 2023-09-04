@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="atividades.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crescente</title>
 </head>
 <body>
     <h1 class="title">Organizador de Números</h1>
@@ -17,7 +17,7 @@
         <?php
             $holdNum = null;
             //Gerar valores aleatórios
-            for($i = 0; $i <= 10; $i++){
+            for($i = 0; $i <= 5; $i++){
                 $num[] = rand(0,100);
             }
             $resp = implode(", ", $num);

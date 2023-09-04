@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="atividades.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Idade</title>
 </head>
 <body>
     <h1 class="container">Idade</h1>
@@ -21,7 +21,7 @@
                 $year = date("Y");
                 $age = $year - $born;
                 if ($age >= 18){
-                    echo "$name é maio de 18 e tem <strong>$age<strong> anos";
+                    echo "$name é maior de 18 e tem <strong>$age<strong> anos";
                 } else{
                     echo "$name é menor de 18 e tem <strong>$age<strong> anos";
                 }

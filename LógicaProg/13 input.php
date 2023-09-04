@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="atividades.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Input</title>
 </head>
 <body>
+    <h1 class="title">Input</h1>
+    <form action="13 input.php" class="container" method="get">
+        <input type="number" name="num" id="" value="<?= $_REQUEST['num'] ?? '' ?>">
+        <input type="submit" value="Clique Aqui">
+    </form>
 
-<?php 
-        $num = 10;
+    <p>
+        <?php
+                $num = $_REQUEST['num'] ?? '';
+        
+                echo $num;
+        ?>
+    </p>
 
-        echo $num;
-    ?>
-<a href="index.php"><button>Index</button></a>
+    <a  class="button-index" href="index.php">Index</a>
 
 </body>
 </html>

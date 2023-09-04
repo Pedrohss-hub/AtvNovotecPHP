@@ -4,14 +4,14 @@
     <link rel="stylesheet" href="atividades.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Par ou Ímpar</title>
 </head>
 <body>
     <h1 class="title">Par ou Ímpar</h1>
     <form class="container" action="4 par.php" method="get">
         <label for="num">Insira o valor aqui</label>
         <input type="number" name="num" value="<?= $_REQUEST["num"] ?? '0'?>">
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Clique Aqui">
     </form>
 
     <p>

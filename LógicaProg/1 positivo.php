@@ -11,7 +11,7 @@
 
     <form class="container" action="1 positivo.php" method="get">
         <input type="number" name="num" id="" value="<?= $_REQUEST["num"] ?? '0'?>">
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Clique Aqui">
     </form>
     
     <?php 
