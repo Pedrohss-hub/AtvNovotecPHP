@@ -16,7 +16,7 @@
 
     <p>
         <?php
-            $num = $_REQUEST["num"];
+            $num = $_REQUEST["num"] ?? 0;
         
             if($num % 2 == 0){
                 if ($num == 0) {

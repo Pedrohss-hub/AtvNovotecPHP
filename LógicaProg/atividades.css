@@ -52,7 +52,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="number"] {
-    width: 100px;
+    width: 120px;
     height: 100px;
     color: black;
     font-size: 50px;
@@ -70,6 +70,10 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+input[type="text"] {
+    color: black;
+}
+
 .button-index {
     margin-left: 40px;
     border-radius: 5px;
@@ -78,6 +82,10 @@ input[type="submit"] {
     padding: 10px;
     box-shadow: 1px 1px 10px  1px white;
     animation: textColor 1s linear infinite;
+}
+
+label {
+    margin-top: 20px;
 }
 
 .resp {

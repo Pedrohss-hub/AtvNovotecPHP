@@ -24,8 +24,8 @@
 
     <div class="tabuada">
     <?php 
-        $num1 = $_REQUEST["num1" ?? 0];
-        $num2 = $_REQUEST["num2" ?? 0];
+        $num1 = $_REQUEST["num1"] ?? 0;
+        $num2 = $_REQUEST["num2"] ?? 0;
 
         if ($num1 && $num2 != null){
             for($num1; $num1 <= $num2; $num1++){

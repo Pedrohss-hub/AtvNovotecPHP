@@ -19,7 +19,7 @@
         <a href="7 idade.php">Idade</a>
         <a href="8 mes.php">Mês</a>
         <a href="9 conversor.php">Metros para centímetros</a>
-        <a href="10 media.php">Media</a>
+        <a href="10 media.php">Média</a>
         <a href="11 celsius.php">Temperatura</a>
         <a href="12 peso.php">Peso</a>
         <a href="13 input.php">Input</a>

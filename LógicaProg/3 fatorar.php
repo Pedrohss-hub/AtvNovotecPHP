@@ -16,7 +16,7 @@
     </form>
 
     <?php 
-        $num = $_REQUEST['num'];
+        $num = $_REQUEST['num'] ?? 0;
         $holdNum = [];
 
         for ($i = 2; $i <= $num; $i++){

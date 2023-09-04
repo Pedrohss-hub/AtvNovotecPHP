@@ -15,7 +15,7 @@
     </form>
     
     <?php 
-        $num = $_REQUEST["num"];
+        $num = $_REQUEST["num"] ?? 0;
         if ($num < 0 ){
             $result = "<strong>Negativo</strong>";
         

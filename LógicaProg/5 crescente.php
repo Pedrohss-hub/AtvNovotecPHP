@@ -9,31 +9,36 @@
 <body>
     <h1 class="title">Organizador de Números</h1>
 
-    
+    <form class="container" action="" method="get">
+        <input type="submit" value="Clique Aqui">
+    </form>
 
-    <?php
-        //Gerar valores aleatórios 
-        $num = [2,0,9,10,0,1,2,3,45,2];
-        $holdNum = null;
-
-        for($i = 0; $i < count($num); $i++){
-
-            for($c = $i+1; $c < count($num); $c++){
-
-                if ($num[$c] < $num[$i]){
-                    $holdNum = $num[$i];
-                    $num[$i] = $num[$c];
-                    $num[$c] = $holdNum;
-    
+    <p>
+        <?php
+            $holdNum = null;
+            //Gerar valores aleatórios
+            for($i = 0; $i <= 10; $i++){
+                $num[] = rand(0,100);
+            }
+            $resp = implode(", ", $num);
+            echo "Inicial: ".$resp."<br><br>";
+            //Organizar os Valores
+            for($i = 0; $i < count($num); $i++){
+                for($c = $i+1; $c < count($num); $c++){
+                    if ($num[$c] < $num[$i]){
+                        $holdNum = $num[$i];
+                        $num[$i] = $num[$c];
+                        $num[$c] = $holdNum;
+        
+                    }
                 }
-            } 
-        }
+            }
+            $resp = implode(", ", $num);
+            echo "Final: ".$resp;
+        ?>
+    </p>
 
-        $resp = implode(", ", $num);
-        echo $resp;
-    ?>
-
-<a  class="button-index" href="index.php">Index</a>
+    <a  class="button-index" href="index.php">Index</a>
 
 </body>
 </html>
