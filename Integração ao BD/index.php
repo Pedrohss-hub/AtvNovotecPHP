@@ -19,7 +19,7 @@
         $serveName = "localhost";
         $userName = "root";
         $password = "";
-        $dbName = "carros";
+        $dbName = "escola";
 
         $con = new mysqli($serveName, $userName, $password, $dbName);
 
@@ -29,14 +29,14 @@
 
         if(isset($_GET['pesquisa']) && !empty($_GET['pesquisa'])) {
             $pesquisa = $_GET['pesquisa'];
-            $sql = "SELECT * FROM carros WHERE modelo LIKE '%$pesquisa%'";
+            $sql = "SELECT * FROM sala3c WHERE Nome LIKE '%$pesquisa%'";
             $result = $con -> query($sql);
 
             if($result -> num_rows > 0) {
                 echo "<h2>Resultado da Pesquisa: </h2>";
                 echo "<ul>";
                 while($row = $result->fetch_assoc()) {
-                    echo "<li>{$row['marca']} - {$row['modelo']} ({$row['ano']})</li>";
+                    echo "<li>{$row['id']} - {$row['Nome']}";
                 }
                 echo "</ul>";
             } else {
