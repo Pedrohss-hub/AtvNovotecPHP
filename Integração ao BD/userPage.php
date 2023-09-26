@@ -16,7 +16,7 @@
         $userLogin = $_POST['login'];
         $passLogin = $_POST['password'];
 
-        $stmt = $conn->prepare("INSERT INTO users (nome, senha) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO users (Nome, Senha) VALUES (?, ?)");
         $stmt->bind_param("ss", $userLogin, $passLogin);
 
         $stmt->execute([$userLogin, $passLogin]);
@@ -26,7 +26,7 @@
        $userLogin = $_GET['user'];
        $passLogin = $_GET['senha'];
     }
-
+        $conn->close();
     ?>
 
     <div class="box">

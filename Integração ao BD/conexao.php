@@ -15,6 +15,4 @@
         $result = $conn->query($sql);
         return $result;
     }
-
-    $conn->close();
 ?>
