@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 <form action="" method="get">
@@ -18,24 +18,29 @@
     </form>
 
     <?php
-        if (!empty($_GET['pesquisaUser']) && !empty($_GET['pesquisaSenha'])) { 
 
-            $serveName = "localhost";
-            $userName = "root";
-            $password = "";
-            $dbName = "user_log";
+        require_once('conexao.php');
+
+        if (!empty($_GET['pesquisaUser']) && !empty($_GET['pesquisaSenha'])) { 
+            $conn = new mysqli($serveName, $userName, $password, $dbName);
         
-            $con = new mysqli($serveName, $userName, $password, $dbName);
+            if ($conn->connect_error) {
+                die("Erro na conexão: ". $conn->connect_error);
+            }
         
-            if ($con->connect_error) {
-                die("Conexão falhou: " . $con->connect_error);
-            }          
+            function executeSQL($sql) {
+                global $conn;
+                $result = $conn->query($sql);
+                return $result;
+            }
         
+            $conn->close();
+
             $dig_user = $_GET['pesquisaUser'];
             $dig_senha = $_GET['pesquisaSenha'];
         
             // Execute a consulta para obter o hash da senha do banco de dados
-            $sqlComand = "SELECT senha FROM usuario WHERE usuario = '$dig_user'";
+            $sqlComand = "SELECT senha FROM users WHERE usuario = '$dig_user'";
             $result = $con->query($sqlComand);
         
             if ($result->num_rows > 0) {
