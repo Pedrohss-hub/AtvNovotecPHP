@@ -1,51 +1,73 @@
-* {
-    font-family: sans-serif;
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+
 }
 
 body {
-    background-image: url(download.gif);
-    background-size: cover;
+
+   background-color: #242424;
+
 }
 
-a {
-    color: aliceblue;
-}
-
-.box {
+.container-main {
     margin: auto;
-    margin-top: 100px;
-    width: 20rem;
-    height: 20rem;
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5%;
-    border-radius: 15px;
-    justify-content: center;
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.959);
-    transition: 0.3s;
-    background-color: rgba(37, 37, 37, 0.3);
-    color: aliceblue;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.699);
+    background-color: #c08e3d;
 }
 
-.title{
-    margin-bottom: 1rem;
+.section-input {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.box-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-input {
+input[type="text"],
+input[type="password"] {
     appearance: none;
+    width: 200px;
+    height: 20px;
     border: none;
-    border-radius: 6px;
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.822);
-    margin: 1rem;
+    border-radius: 4px;
     background-color: aliceblue;
     padding: 3px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.699);
+    margin-top: 5px;
 }
 
-.btn {
+.text-below {
+    font-size: 15px;
+}
+
+.text-error {
+    margin-top: 20px;
+    text-align: center;
+    color: red;
+}
+
+input[type="submit"]{
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.699);
+    font-size: 15px;
+    color: #242424;
     background-color: aliceblue;
-    padding: 5px;
+    padding: 10px;
     font-weight: bold;
     cursor: pointer;
 }

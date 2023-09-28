@@ -2,7 +2,7 @@
     $serveName = "localhost";
     $userName = "root";
     $password = "";
-    $dbName = "user_log";
+    $dbName = "carros";
 
     $conn = new mysqli($serveName, $userName, $password, $dbName);
 
@@ -10,7 +10,7 @@
         die("Erro na conexão: ". $conn->connect_error);
     }
 
-    function executeSQL($sql) {
+    function executeSQLCar($sql) {
         global $conn;
         $result = $conn->query($sql);
         return $result;

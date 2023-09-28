@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="userPage.css">
+    <title>Página Usuário</title>
 </head>
 <body>
-    <?php     
-
-    require_once('conexao.php');
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){  
-
-        //verificar login
-        $userLogin = $_POST['login'];
-        $passLogin = $_POST['password'];
-
-        $stmt = $conn->prepare("INSERT INTO users (Nome, Senha) VALUES (?, ?)");
-        $stmt->bind_param("ss", $userLogin, $passLogin);
-
-        $stmt->execute([$userLogin, $passLogin]);
-    }
-
-    if($_SERVER["REQUEST_METHOD"] == "GET"){
-       $userLogin = $_GET['user'];
-       $passLogin = $_GET['senha'];
-    }
-        $conn->close();
+    <?php 
+        session_start();
     ?>
-
-    <div class="box">
-        <div class="textos">
-            <h2 class="username"> Seu username é:<?= $userLogin ?? '' ?></h2>
-            <h2 class="password"> Sua senha é: <?= $passLogin ?? '' ?></h2>
-            <a href="index.php">Página Inicial</a><br>
-            <a href="login.php">Página de Login</a>
+    <header>
+        <span class="user-header">Usuário: <?= $_SESSION['userLogin'] ?? ''?></span>
+        <img class="img-header" src="user.png" alt="...">
+    </header>
+    <a class="exit" href="index.php">Sair</a>
+    <form class="main" action="<?= $_SERVER['PHP_SELF']?>" method="post">
+        <div class="box-input">
+            <label for="">Digite o Modelo de Carro</label>
+            <input type="text" name="searchCar">
         </div>
-    </div>
+        <input type="submit" value="Procurar">
+    </form>
+
+    <?php
+        require_once('conexaoCar.php');
+        $dig_car =  $_POST['searchCar'] ?? '';
+        $sqlComand = "SELECT * FROM modelos WHERE modelo LIKE '%$dig_car%'";
+        $result = $conn->query($sqlComand);
+        if(!empty($_POST['searchCar'])){    
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()){
+                    echo $row['modelo']." ".$row['marca']."<br>";
+                }
+
+            } else {
+                echo"Nenhum Modelo Encontrado";
+            }
+            $conn->close();
+        }
+    ?>
 </body>
 </html>
