@@ -19,27 +19,28 @@
     <form class="main" action="<?= $_SERVER['PHP_SELF']?>" method="post">
         <div class="box-input">
             <label for="">Digite o Modelo de Carro</label>
-            <input type="text" name="searchCar">
+            <input type="text" name="searchCar" value="<?= $_POST['searchCar'] ?? ''?>">
         </div>
         <input type="submit" value="Procurar">
     </form>
 
-    <?php
-        require_once('conexaoCar.php');
-        $dig_car =  $_POST['searchCar'] ?? '';
-        $sqlComand = "SELECT * FROM modelos WHERE modelo LIKE '%$dig_car%'";
-        $result = $conn->query($sqlComand);
-        if(!empty($_POST['searchCar'])){    
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()){
-                    echo $row['modelo']." ".$row['marca']."<br>";
+    <div class="centralizar">
+        <?php
+            require_once('conexaoCar.php');
+            $dig_car =  $_POST['searchCar'] ?? '';
+            $sqlComand = "SELECT * FROM carros WHERE Modelo LIKE '%$dig_car%'";
+            $result = $conn->query($sqlComand);
+            if(!empty($_POST['searchCar'])){
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()){
+                        echo "<p>".$row['Modelo']." ".$row['Marca']." ". $row['Ano']."</p>";
+                    }
+                } else {
+                    echo"Nenhum Modelo Encontrado";
                 }
-
-            } else {
-                echo"Nenhum Modelo Encontrado";
+                $conn->close();
             }
-            $conn->close();
-        }
-    ?>
+        ?>
+    </div>
 </body>
 </html>
